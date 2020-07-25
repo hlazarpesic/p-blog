@@ -5,8 +5,8 @@ import RxCocoa
 
 class PreviewViewController: UIViewController, Storyboard {
     
-    var eventsSubject = PublishSubject<Event>()
-    var db = DisposeBag()
+    fileprivate var eventSubject = PublishSubject<Event>()
+    fileprivate var db = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ extension PreviewViewController: Coordinated {
     }
     
     var events: Observable<PreviewViewController.Event> {
-        return eventsSubject
+        return eventSubject
     }
 }
 

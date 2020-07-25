@@ -29,6 +29,16 @@
 		30F02CA024CCAB6F001D8337 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02C9F24CCAB6F001D8337 /* SettingsViewModel.swift */; };
 		30F02CA324CCB271001D8337 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CA224CCB271001D8337 /* R.generated.swift */; };
 		30F02CA624CCBF30001D8337 /* LocalizedStrings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30F02CA824CCBF30001D8337 /* LocalizedStrings.strings */; };
+		30F02CAB24CCD266001D8337 /* GetDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CAA24CCD266001D8337 /* GetDataUseCase.swift */; };
+		30F02CAD24CCD2D9001D8337 /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CAC24CCD2D9001D8337 /* UseCase.swift */; };
+		30F02CB124CCD472001D8337 /* PBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CB024CCD472001D8337 /* PBlogAPI.swift */; };
+		30F02CB624CCD56A001D8337 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CB524CCD56A001D8337 /* Repository.swift */; };
+		30F02CB824CCD5FE001D8337 /* ApiDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CB724CCD5FE001D8337 /* ApiDataStore.swift */; };
+		30F02CBA24CCD62B001D8337 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CB924CCD62B001D8337 /* Database.swift */; };
+		30F02CBC24CCD676001D8337 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CBB24CCD676001D8337 /* Network.swift */; };
+		30F02CC024CCDBD2001D8337 /* RealmDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CBF24CCDBD2001D8337 /* RealmDAO.swift */; };
+		30F02CC224CCDBFE001D8337 /* MainListDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CC124CCDBFE001D8337 /* MainListDAO.swift */; };
+		30F02CC424CCDC0C001D8337 /* FavoritesDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F02CC324CCDC0C001D8337 /* FavoritesDAO.swift */; };
 		C0CFC6E5BC2AA4D6925BAAC3 /* Pods_PBlog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B61103B06389642089768979 /* Pods_PBlog.framework */; };
 		F40A21620F087C82787A3152 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A2621659D64804D488C31 /* Singleton.swift */; };
 		F40A27B1F51FE17406D4BD58 /* UIApplication+CurrentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F40A25CA6533F671F817CF4C /* UIApplication+CurrentWindow.swift */; };
@@ -81,6 +91,16 @@
 		30F02C9F24CCAB6F001D8337 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		30F02CA224CCB271001D8337 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		30F02CA724CCBF30001D8337 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LocalizedStrings.strings; sourceTree = "<group>"; };
+		30F02CAA24CCD266001D8337 /* GetDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDataUseCase.swift; sourceTree = "<group>"; };
+		30F02CAC24CCD2D9001D8337 /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		30F02CB024CCD472001D8337 /* PBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBlogAPI.swift; sourceTree = "<group>"; };
+		30F02CB524CCD56A001D8337 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		30F02CB724CCD5FE001D8337 /* ApiDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataStore.swift; sourceTree = "<group>"; };
+		30F02CB924CCD62B001D8337 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		30F02CBB24CCD676001D8337 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		30F02CBF24CCDBD2001D8337 /* RealmDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDAO.swift; sourceTree = "<group>"; };
+		30F02CC124CCDBFE001D8337 /* MainListDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListDAO.swift; sourceTree = "<group>"; };
+		30F02CC324CCDC0C001D8337 /* FavoritesDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesDAO.swift; sourceTree = "<group>"; };
 		B61103B06389642089768979 /* Pods_PBlog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PBlog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71AF29550F48E96C1E21DBD /* Pods-PBlog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PBlog.release.xcconfig"; path = "Target Support Files/Pods-PBlog/Pods-PBlog.release.xcconfig"; sourceTree = "<group>"; };
 		F40A25CA6533F671F817CF4C /* UIApplication+CurrentWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+CurrentWindow.swift"; sourceTree = "<group>"; };
@@ -151,6 +171,9 @@
 			children = (
 				3044DC0524015ED500C47733 /* AppDelegate.swift */,
 				3044DC362401621E00C47733 /* Coordinator */,
+				30F02CA924CCD232001D8337 /* UseCases */,
+				30F02CAF24CCD32F001D8337 /* Networking */,
+				30F02CAE24CCD326001D8337 /* Persistance */,
 				3044DC392401626100C47733 /* Models */,
 				3044DC382401624C00C47733 /* Views */,
 				3044DC3A2401626B00C47733 /* ViewModels */,
@@ -265,6 +288,77 @@
 				F40A25CA6533F671F817CF4C /* UIApplication+CurrentWindow.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		30F02CA924CCD232001D8337 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CAC24CCD2D9001D8337 /* UseCase.swift */,
+				30F02CAA24CCD266001D8337 /* GetDataUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		30F02CAE24CCD326001D8337 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CB224CCD52B001D8337 /* Repository */,
+				30F02CB324CCD53E001D8337 /* DataStore */,
+				30F02CB424CCD546001D8337 /* Database */,
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		30F02CAF24CCD32F001D8337 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CB024CCD472001D8337 /* PBlogAPI.swift */,
+				30F02CBB24CCD676001D8337 /* Network.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		30F02CB224CCD52B001D8337 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CB524CCD56A001D8337 /* Repository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		30F02CB324CCD53E001D8337 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CB724CCD5FE001D8337 /* ApiDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		30F02CB424CCD546001D8337 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CB924CCD62B001D8337 /* Database.swift */,
+				30F02CBE24CCDBA2001D8337 /* Realm */,
+				30F02CBD24CCDB97001D8337 /* DAOs */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		30F02CBD24CCDB97001D8337 /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CC124CCDBFE001D8337 /* MainListDAO.swift */,
+				30F02CC324CCDC0C001D8337 /* FavoritesDAO.swift */,
+			);
+			path = DAOs;
+			sourceTree = "<group>";
+		};
+		30F02CBE24CCDBA2001D8337 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				30F02CBF24CCDBD2001D8337 /* RealmDAO.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		ED8E904E0DB9976F86FA4858 /* Frameworks */ = {
@@ -472,14 +566,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30F02CC424CCDC0C001D8337 /* FavoritesDAO.swift in Sources */,
+				30F02CBC24CCD676001D8337 /* Network.swift in Sources */,
 				30F02C9A24CCAB27001D8337 /* SplashViewModel.swift in Sources */,
 				3044DC4724016EF200C47733 /* Coordinated.swift in Sources */,
+				30F02CAB24CCD266001D8337 /* GetDataUseCase.swift in Sources */,
+				30F02CC024CCDBD2001D8337 /* RealmDAO.swift in Sources */,
+				30F02CBA24CCD62B001D8337 /* Database.swift in Sources */,
 				3044DC4E2402B7EB00C47733 /* MainViewController.swift in Sources */,
 				3044DC40240168FC00C47733 /* AppCoordinator.swift in Sources */,
 				3044DC4524016C6400C47733 /* OnboardingCoordinator.swift in Sources */,
+				30F02CB824CCD5FE001D8337 /* ApiDataStore.swift in Sources */,
 				3044DC4224016BE000C47733 /* Storyboard.swift in Sources */,
 				30F02CA324CCB271001D8337 /* R.generated.swift in Sources */,
 				3044DC3E2401683500C47733 /* Coordinator.swift in Sources */,
+				30F02CB624CCD56A001D8337 /* Repository.swift in Sources */,
 				3044DC0A24015ED500C47733 /* SplashViewController.swift in Sources */,
 				3044DC4C2402B02A00C47733 /* MainCoordinator.swift in Sources */,
 				3044DC0624015ED500C47733 /* AppDelegate.swift in Sources */,
@@ -487,8 +588,11 @@
 				F40A27B1F51FE17406D4BD58 /* UIApplication+CurrentWindow.swift in Sources */,
 				F40A2DD8AF5EA26D4511360F /* Schedulers.swift in Sources */,
 				30F02C9624CCA36C001D8337 /* PreviewViewController.swift in Sources */,
+				30F02CC224CCDBFE001D8337 /* MainListDAO.swift in Sources */,
 				F40A21620F087C82787A3152 /* Singleton.swift in Sources */,
+				30F02CB124CCD472001D8337 /* PBlogAPI.swift in Sources */,
 				30F02C9C24CCAB4B001D8337 /* MainViewModel.swift in Sources */,
+				30F02CAD24CCD2D9001D8337 /* UseCase.swift in Sources */,
 				30F02C9E24CCAB5C001D8337 /* PreviewViewModel.swift in Sources */,
 				30F02CA024CCAB6F001D8337 /* SettingsViewModel.swift in Sources */,
 			);
