@@ -9,5 +9,6 @@ target 'PBlog' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'R.swift'
-
+  pod 'Alamofire'
+  pod 'RealmSwift'
 end
