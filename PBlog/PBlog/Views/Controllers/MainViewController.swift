@@ -3,35 +3,81 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainVC: UIViewController, Storyboard {
+class MainViewController: UIViewController, Storyboard {
     
-    var eventsSubject = PublishSubject<Event>()
-    var db = DisposeBag()
+    fileprivate var eventSubject = PublishSubject<Event>()
+    fileprivate var db = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         bind()
+    }
+}
+
+
+//MARK: UI
+
+fileprivate extension MainViewController {
+    
+    func setupUI() {
+        setupNavigationBarButtons()
+    }
+
+    func setupNavigationBarButtons() {
+        let settingsButton: UIButton = UIButton.init(type: .custom)
+        settingsButton.setImage(R.image.baseline_settings_black_24pt(), for: .normal)
+        settingsButton.tintColor = .white
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        settingsButton.addTarget(self, action: #selector(self.openSettings), for: .touchUpInside)
+        let settingsNavBarButton = UIBarButtonItem(customView: settingsButton)
+        
+        let favoriteButton: UIButton = UIButton.init(type: .custom)
+        favoriteButton.setImage(R.image.baseline_favorite_black_24pt(), for: .normal)
+        favoriteButton.tintColor = .white
+        favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        favoriteButton.addTarget(self, action: #selector(self.showFavorites), for: .touchUpInside)
+        let favoriteNavBarButton = UIBarButtonItem(customView: favoriteButton)
+        
+        navigationItem.rightBarButtonItems = [settingsNavBarButton, favoriteNavBarButton]
+    }
+}
+
+
+//MARK: Actions
+
+fileprivate extension MainViewController {
+    
+    @objc func showFavorites() {
+        let alert = UIAlertController(title: R.string.localizedStrings.notAvailableInThisVersion(), message: nil, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: R.string.localizedStrings.ok(), style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func openSettings() {
+        eventSubject.onNext(.showSettings)
     }
 }
 
 
 //MARK: Coordinated
 
-extension MainVC: Coordinated {
+extension MainViewController: Coordinated {
     
     enum Event {
-        case finished
+        case showPreviewScreen
+        case showSettings
     }
     
-    var events: Observable<MainVC.Event> {
-        return eventsSubject
+    var events: Observable<MainViewController.Event> {
+        return eventSubject
     }
 }
 
 
 //MARK: Bindings
 
-fileprivate extension MainVC {
+fileprivate extension MainViewController {
     
     func bind() {
         //call methods

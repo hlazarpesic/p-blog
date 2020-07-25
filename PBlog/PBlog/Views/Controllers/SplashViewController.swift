@@ -2,10 +2,10 @@ import Foundation
 import UIKit
 import RxSwift
 
-class SplashVC: UIViewController, Storyboard {
+class SplashViewController: UIViewController, Storyboard {
 
-    var eventsSubject = PublishSubject<Event>()
-    var db = DisposeBag()
+    fileprivate var eventSubject = PublishSubject<Event>()
+    fileprivate var db = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class SplashVC: UIViewController, Storyboard {
 
 //MARK: Actions
 
-extension SplashVC {
+extension SplashViewController {
 
     func timeout() {
         Observable<Int>
@@ -31,7 +31,7 @@ extension SplashVC {
                         return
                     }
 
-                    me.eventsSubject.onNext(.finished)
+                    me.eventSubject.onNext(.finished)
                 }).disposed(by: db)
     }
 }
@@ -39,13 +39,13 @@ extension SplashVC {
 
 //MARK: Coordinated
 
-extension SplashVC: Coordinated {
+extension SplashViewController: Coordinated {
 
     enum Event {
         case finished
     }
 
-    var events: Observable<SplashVC.Event> {
-        return eventsSubject
+    var events: Observable<SplashViewController.Event> {
+        return eventSubject
     }
 }

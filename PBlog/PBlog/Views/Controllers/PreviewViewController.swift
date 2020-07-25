@@ -12,7 +12,6 @@ class PreviewViewController: UIViewController, Storyboard {
         super.viewDidLoad()
         bind()
     }
-    
 }
 
 

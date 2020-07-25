@@ -1,6 +1,0 @@
-framework module Pods_PBlog_PBlogUITests {
-  umbrella header "Pods-PBlog-PBlogUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}

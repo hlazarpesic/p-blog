@@ -20,8 +20,8 @@ class OnboardingCoordinator: Coordinator {
 extension OnboardingCoordinator {
 
     func showSplashVC() {
-        let viewController = SplashVC.instantiate()
-        (UIApplication.currentWindow.rootViewController as! UINavigationController).pushViewController(viewController, animated: false)
+        let viewController = SplashViewController.instantiate()
+        UIApplication.currentWindow.rootViewController = viewController
         bind(to: viewController)
     }
 }
@@ -45,7 +45,7 @@ extension OnboardingCoordinator: Coordinated {
 
 extension OnboardingCoordinator {
 
-    func bind(to coordinated: SplashVC) {
+    func bind(to coordinated: SplashViewController) {
         coordinated.events.subscribe(onNext: { [weak self] event in
             guard let me = self else {
                 return
