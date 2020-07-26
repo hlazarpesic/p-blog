@@ -27,14 +27,22 @@ fileprivate extension MainViewController {
     func setupNavigationBarButtons() {
         let settingsButton: UIButton = UIButton.init(type: .custom)
         settingsButton.setImage(R.image.baseline_settings_black_24pt(), for: .normal)
-        settingsButton.tintColor = .white
+        if #available(iOS 13, *) {
+            settingsButton.tintColor = .label
+        } else {
+            settingsButton.tintColor = .black
+        }
         settingsButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         settingsButton.addTarget(self, action: #selector(self.openSettings), for: .touchUpInside)
         let settingsNavBarButton = UIBarButtonItem(customView: settingsButton)
         
         let favoriteButton: UIButton = UIButton.init(type: .custom)
         favoriteButton.setImage(R.image.baseline_favorite_black_24pt(), for: .normal)
-        favoriteButton.tintColor = .white
+        if #available(iOS 13, *) {
+            favoriteButton.tintColor = .label
+        } else {
+            favoriteButton.tintColor = .black
+        }
         favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         favoriteButton.addTarget(self, action: #selector(self.showFavorites), for: .touchUpInside)
         let favoriteNavBarButton = UIBarButtonItem(customView: favoriteButton)

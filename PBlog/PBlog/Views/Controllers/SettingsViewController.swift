@@ -4,11 +4,11 @@ import RxSwift
 import RxCocoa
 
 class SettingsViewController: UIViewController, Storyboard {
-    
+
     @IBOutlet weak var versionLabel: UILabel!
-    
+
     fileprivate let viewModel = SettingsViewModel()
-    
+
     fileprivate var eventSubject = PublishSubject<Event>()
     fileprivate var db = DisposeBag()
 
@@ -30,19 +30,23 @@ fileprivate extension SettingsViewController {
 
     func setupNavigationBar() {
         self.title = R.string.localizedStrings.settings()
-        
+
         self.navigationItem.hidesBackButton = true
-        
+
         let backButton: UIButton = UIButton.init(type: .custom)
         backButton.setTitle(R.string.localizedStrings.back(), for: .normal)
-        backButton.tintColor = .white
+        if #available(iOS 13, *) {
+            backButton.setTitleColor(.label, for: .normal)
+        } else {
+            backButton.setTitleColor(.black, for: .normal)
+        }
         backButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
         backButton.addTarget(self, action: #selector(self.back), for: .touchUpInside)
         let backNavBarButton = UIBarButtonItem(customView: backButton)
-        
+
         navigationItem.leftBarButtonItem = backNavBarButton
     }
-    
+
     func setupVersionLabel() {
         versionLabel.text = viewModel.version
     }
@@ -52,7 +56,7 @@ fileprivate extension SettingsViewController {
 //MARK: Actions
 
 fileprivate extension SettingsViewController {
-    
+
     @objc func back() {
         eventSubject.onNext(.finished)
     }
